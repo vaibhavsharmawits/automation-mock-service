@@ -24,9 +24,6 @@ export async function on_search_B2B_logistics(existingPayload: any, sessionData:
   const deliveryFulfillment = sessionData?.fulfillment
   console.log("deliveryFulfillment", JSON.stringify(deliveryFulfillment));
   deliveryFulfillment.id = "F1"
-  deliveryFulfillment.start.time.duration =
-            TatMapping[sessionData.category_id as string].pickupTime;
-
   const items: any[] = [];
 
   const categoriesData = {
